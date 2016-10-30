@@ -1,0 +1,24 @@
+<div class="form-group message" ng-if="items.length == 0">
+    <!-- Your message can go here. -->
+    <div class="alert alert-warning" role="alert">Nothing Found</div>
+</div>
+
+
+<table class="table table-striped" ng-if="items.length > 0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Description</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in items">
+            <td>{{ item.name }}</td>
+            <td>{{ item.short_name }}</td>
+            <td>{{ item.description }}</td>
+            <td><button ng-click="onRemove({index: $index});">Dont want this one!</button></td>
+        </tr>
+    </tbody>
+</table>
