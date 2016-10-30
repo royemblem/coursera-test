@@ -73,7 +73,7 @@
                 //loop over the results and search for the search term in the name string
                 angular.forEach(menuItems, function (item) {
                     // check the item name for the string the user entered
-                    if(item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1){
+                    if(item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1){
                         foundItems.push(item);
                     }
                 });
