@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" >Menu App</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="categories">Menu Categories</a></li>
+            <li class="active"><a ui-sref="categoryDetail({categoryId: categoryDetail.category.short_name})">{{ categoryDetail.category.name }}</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="list-group">
+    <li ng-repeat="item in categoryDetail.menuItems" class="list-group-item">
+        <h4 class="list-group-item-heading">{{ item.name }}</h4>
+        <p class="list-group-item-text">{{ item.description }}</p>
+        
+    </li>
+</div>
+
