@@ -32,7 +32,7 @@ function routeConfig ($stateProvider) {
       controllerAs: 'infoCtrl',
       resolve: {
         user: ['UserService', function (UserService) {
-          return UserService.getStoredUser();
+          return UserService.getStoredUserWithMenuItem();
         }]
       }
     })

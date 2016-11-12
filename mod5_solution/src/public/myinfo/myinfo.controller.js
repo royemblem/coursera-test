@@ -7,14 +7,8 @@
     MyInfoController.$inject = ['user', 'MenuService'];
     function MyInfoController(user, MenuService) {
         var infoCtrl = this;
-
+        console.log('user is ', user);
         infoCtrl.user = user;
-
-        //load the menu item for the user.
-        MenuService.getMenuItem(user.favdish).then(function (response) {
-            infoCtrl.menuItem = response;
-        });
-
 
     }
 
