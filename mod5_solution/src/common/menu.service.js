@@ -10,7 +10,7 @@ function MenuService($http, ApiPath) {
   var service = this;
 
   service.isValidShortName = function(shortName){
-    return $http.get(ApiPath + '/menu_items/' + shortName + '.json').then(function (response) {
+    return $http.get(ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json').then(function (response) {
       if(response.data.short_name === shortName){
         return true;
       }else{
